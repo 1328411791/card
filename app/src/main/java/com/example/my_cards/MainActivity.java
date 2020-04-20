@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
                 finish();
                 break;
-            case R.id.More:
+            case R.id.More: //设置更多逻辑
                 Toast.makeText(this,"了解更多",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("http://47.102.139.96/"));
                 startActivity(intent);
                 break;
-            case  R.id.Exit:
+            case  R.id.Exit: //退出
                 Toast.makeText(this,"退出",Toast.LENGTH_SHORT).show();
                 finish();
                 break;
