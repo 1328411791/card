@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height=""
+        android:layout_height="wrap_content"
         android:text="公主连接"
         android:gravity="center"
         android:textSize="26sp"
