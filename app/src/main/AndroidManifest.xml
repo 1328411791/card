@@ -12,11 +12,11 @@
         <activity
             android:name=".SettingActivity"
             android:label="设置">
-            
+
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="公主连结防上头抽卡模拟器">
+            android:label="抽卡防上头抽卡模拟器">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
