@@ -30,26 +30,35 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="公主连接"
-        android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="确定"
+        app:layout_constraintBottom_toTopOf="@+id/button_1" />
 
     <EditText
         android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="输入你想要抽的次数"
-        app:layout_constraintBottom_toTopOf="@+id/button_1"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="公主连接"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

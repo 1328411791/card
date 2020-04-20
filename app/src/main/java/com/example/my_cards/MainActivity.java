@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()){              //分别设置菜单键逻辑
             case R.id.Setting:
                 Toast.makeText(this,"你点击了设置（设置未完成）",Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(MainActivity.this,SettingActivity.class);
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button1 = (Button)findViewById(R.id.button_1);
+        Button button1 = findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,10 +65,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"你已经十连",Toast.LENGTH_SHORT).show();
-                TextView textView1 = findViewById(R.id.textView);
-                textView1.setText("十连");
             }
         });
+/*
+        Button button3 = findViewById(R.id.button_3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()){
+                    case R.id.button:
+                        EditText editText = findViewById(R.id.edit1);
+                        String inputText = editText.getText().toString();
+                        Toast.makeText(MainActivity.this,inputText,
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+
+
+
+
+                }
+            }
+        });*/
+
 
 
 
