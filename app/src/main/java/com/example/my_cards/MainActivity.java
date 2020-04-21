@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){              //分别设置菜单键逻辑
+            case R.id.character:
+                Intent intent2 = new Intent(MainActivity.this,characterActivity.class);
+                startActivity(intent2);
+                finish();
+                break;
             case R.id.Setting:
                 Toast.makeText(this,"你点击了设置（设置未完成）",Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(MainActivity.this,SettingActivity.class);
