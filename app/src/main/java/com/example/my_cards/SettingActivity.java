@@ -41,8 +41,8 @@ public class SettingActivity extends AppCompatActivity {
                 if (b){
                     AlertDialog.Builder dialog = new AlertDialog.Builder(SettingActivity.this);
                     dialog.setTitle("你点击了设置按钮");
-                    dialog.setMessage("其实这个设置按钮并没有什么用途，仅仅做个例子");
-                    dialog.setCancelable(false);
+                    dialog.setMessage("其实这个设置按钮并没有什么用途，仅仅做个样子");
+                    dialog.setCancelable(true);
                     dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {

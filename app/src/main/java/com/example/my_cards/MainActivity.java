@@ -9,12 +9,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private String[] data = {"A","B","C","D"};//设置菜单数据
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -50,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                MainActivity.this,android.R.layout.simple_list_item_1,data);
+        ListView listView = findViewById(R.id.listView);
+        listView.setAdapter(adapter); //将菜单数据设置
 
         Button button1 = findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
