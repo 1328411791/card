@@ -1,11 +1,15 @@
 package com.example.my_cards;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 public class SettingActivity extends AppCompatActivity {
     @Override
@@ -27,6 +31,35 @@ public class SettingActivity extends AppCompatActivity {
                 Intent intent = new Intent(SettingActivity.this,MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        Switch switch1 = findViewById(R.id.switch1);
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(SettingActivity.this);
+                    dialog.setTitle("你点击了设置按钮");
+                    dialog.setMessage("其实这个设置按钮并没有什么用途，仅仅做个例子");
+                    dialog.setCancelable(false);
+                    dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    });
+                    dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    });
+                    dialog.show();
+                }
+                else {
+
+                }
             }
         });
     }
