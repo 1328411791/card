@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 three_star = 0;
                 two_star = 0;
                 one_star = 0;
+                chishu = 0;
                 adapter[0] = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, data1);
                 listView.setAdapter(adapter[0]);
                 text();
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void threeStar() {
         Random R1 = new Random();
-        int r = R1.nextInt(13);
+        int r = R1.nextInt(14);
         three_star=three_star+1;
             switch (r) {
                 case 0:
@@ -160,6 +161,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 12:
                     data1.add("3☆  姬塔");
+                    break;
+                case 13:
+                    data1.add("3☆  纯");
                     break;
                 default:
                     data1.add("null3");
