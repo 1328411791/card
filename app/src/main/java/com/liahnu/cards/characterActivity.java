@@ -1,4 +1,4 @@
-package com.liahnu.my_cards;
+package com.liahnu.cards;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,7 +29,6 @@ public class characterActivity extends AppCompatActivity {
     }
 
     private void initcherecter(){//分别添加人物图片，名字
-        for (int i =0 ;i<5;i++ ) { //目前添加的人过少，多循环几次增加人数
             Character a1 = new Character("亚里莎", R.drawable.a1_pic);
             characterList.add(a1);
             Character a2 = new Character("姬塔", R.drawable.a2_pic);
@@ -38,6 +37,6 @@ public class characterActivity extends AppCompatActivity {
             characterList.add(a3);
             Character a4 = new Character("星野静流", R.drawable.a4_pic);
             characterList.add(a4);
-        }
+        
     }
 }

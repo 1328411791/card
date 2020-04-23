@@ -5,11 +5,11 @@ android {
 
 
     defaultConfig {
-        applicationId "com.example.my_cards"
+        applicationId "com.liahnu.cards"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

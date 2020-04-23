@@ -1,4 +1,4 @@
-package com.liahnu.my_cards;
+package com.liahnu.cards;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -272,9 +272,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         }
-
-
-    }
+}
 
 
 
