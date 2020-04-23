@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.my_cards">
+    package="com.liahnu.my_cards">
 
     <application
         android:allowBackup="true"
@@ -12,15 +12,15 @@
         android:largeHeap="true"
         android:hardwareAccelerated="false">
         <activity
-            android:name=".characterActivity"
+            android:name="com.liahnu.my_cards.characterActivity"
             android:label="人物列表">
 
         </activity>
         <activity
-            android:name=".SettingActivity"
+            android:name="com.liahnu.my_cards.SettingActivity"
             android:label="设置"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.liahnu.my_cards.MainActivity"
             android:label="抽卡防上头模拟器">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.my_cards;
+package com.liahnu.my_cards;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;

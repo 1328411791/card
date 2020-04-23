@@ -41,14 +41,16 @@
     <ListView
         android:id="@+id/list1"
         android:layout_width="match_parent"
-        android:layout_height="570dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1px"
+        android:divider="#f9b68b"
         app:layout_constraintBottom_toTopOf="@+id/button_3"
         app:layout_constraintEnd_toEndOf="parent"
-        android:dividerHeight="20px"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

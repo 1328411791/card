@@ -1,4 +1,4 @@
-package com.example.my_cards;
+package com.liahnu.my_cards;
 
 import org.junit.Test;
 

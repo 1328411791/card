@@ -1,4 +1,4 @@
-package com.example.my_cards;
+package com.liahnu.my_cards;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.character:
                 Intent intent2 = new Intent(MainActivity.this, characterActivity.class);
                 startActivity(intent2);
-                finish();
                 break;
             case R.id.Setting:
                 Toast.makeText(this, "你点击了设置（设置未完成）", Toast.LENGTH_SHORT).show();
@@ -162,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void twoStar() {
         Random R = new Random();
-        int r = R.nextInt(14);
+        int r = R.nextInt(15);
             switch (r) {
                 case 0:
                     data1.add("2☆  茜里");
@@ -200,13 +199,13 @@ public class MainActivity extends AppCompatActivity {
                 case 11:
                     data1.add("2☆  空花");
                     break;
-                case  12:
+                case 12:
                     data1.add("2☆  珠希");
                     break;
-                case  13:
+                case 13:
                     data1.add("2☆  美冬");
                     break;
-                case  14:
+                case 14:
                     data1.add("2☆  深月");
                     break;
                 default:
@@ -220,7 +219,6 @@ public class MainActivity extends AppCompatActivity {
     public void oneStar() {
         Random R = new Random();
         int r = R.nextInt(10);
-
             switch (r) {
                 case 0:
                     data1.add("1☆  日和莉");
