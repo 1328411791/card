@@ -31,28 +31,24 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="确定"
+        android:text="重置"
         app:layout_constraintBottom_toTopOf="@+id/button_1" />
 
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="输入你想要抽的次数"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/list1"
         android:layout_width="match_parent"
-        android:layout_height="486dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit1"
+        android:layout_height="570dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:dividerHeight="20px"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintVertical_bias="0.03" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,12 +67,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final ArrayAdapter<String>[] adapter = new ArrayAdapter[]{new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, data1)};
+        final ListView listView = findViewById(R.id.list1);
+
         Button button1 = findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "你已经单抽", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "你已经单抽", Toast.LENGTH_SHORT).show();
                 open(1);
+                listView.setAdapter(adapter[0]);
+
             }
         });
 
@@ -80,178 +85,194 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "你已经十连", Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(MainActivity.this, "你已经十连", Toast.LENGTH_SHORT).show();
                 open(10);
+                listView.setAdapter(adapter[0]);
 
             }
         });
 
-        ArrayAdapter<String>adapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,data1);
-        ListView listView = findViewById(R.id.list1);
-        listView.setAdapter(adapter);
+        Button button3 = findViewById(R.id.button_3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"已重置",Toast.LENGTH_SHORT).show();
+                data1.clear();
+                adapter[0] = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, data1);
+                listView.setAdapter(adapter[0]);
+
+            }
+        });
+
+
+        listView.setAdapter(adapter[0]);
     }
 
 
     public void threeStar() {
         Random R1 = new Random();
         int r = R1.nextInt(13);
-        while (true) {
             switch (r) {
+                case 0:
+                    data1.add("3☆  杏奈");
+                    break;
                 case 1:
-                    data1.add("");
+                    data1.add("3☆  真步");
                     break;
                 case 2:
-                    data1.add("");
+                    data1.add("3☆  璃乃");
                     break;
                 case 3:
-                    data1.add("");
+                    data1.add("3☆  初音");
                     break;
                 case 4:
-                    data1.add("");
+                    data1.add("3☆  伊绪");
                     break;
                 case 5:
-                    data1.add("");
+                    data1.add("3☆  咲恋");
                     break;
                 case 6:
-                    data1.add("");
+                    data1.add("3☆  望");
                     break;
                 case 7:
-                    data1.add("");
+                    data1.add("3☆  妮侬");
                     break;
                 case 8:
-                    data1.add("");
+                    data1.add("3☆  秋乃");
                     break;
                 case 9:
-                    data1.add("");
+                    data1.add("3☆  真琴");
                     break;
                 case 10:
-                    data1.add("");
+                    data1.add("3☆  静流");
                     break;
                 case 11:
-                    data1.add("");
+                    data1.add("3☆  莫妮卡");
                     break;
                 case 12:
-                    data1.add("");
-                    break;
-                case 13:
-                    data1.add("");
+                    data1.add("3☆  姬塔");
                     break;
                 default:
+                    data1.add("null3");
+
             }
 
-        }
+
     }
 
     public void twoStar() {
         Random R = new Random();
-        int r = R.nextInt(13);
-        while (true) {
+        int r = R.nextInt(14);
             switch (r) {
+                case 0:
+                    data1.add("2☆  茜里");
+                    break;
                 case 1:
-                    data1.add("");
+                    data1.add("2☆  宫子");
                     break;
                 case 2:
-                    data1.add("");
+                    data1.add("2☆  雪");
                     break;
                 case 3:
-                    data1.add("");
+                    data1.add("2☆  铃奈");
                     break;
                 case 4:
-                    data1.add("");
+                    data1.add("2☆  香织");
                     break;
                 case 5:
-                    data1.add("");
+                    data1.add("2☆  美美");
                     break;
                 case 6:
-                    data1.add("");
+                    data1.add("2☆  惠理子");
                     break;
                 case 7:
-                    data1.add("");
+                    data1.add("2☆  忍");
+                    break;
+                case 8:
+                    data1.add("2☆  真阳");
                     break;
                 case 9:
-                    data1.add("");
+                    data1.add("2☆  栞");
                     break;
                 case 10:
-                    data1.add("");
+                    data1.add("2☆  千歌");
                     break;
                 case 11:
-                    data1.add("");
+                    data1.add("2☆  空花");
                     break;
-                case 12:
-                    data1.add("");
+                case  12:
+                    data1.add("2☆  珠希");
                     break;
-                case 13:
-                    data1.add("");
+                case  13:
+                    data1.add("2☆  美冬");
+                    break;
+                case  14:
+                    data1.add("2☆  深月");
                     break;
                 default:
+                    data1.add("null2");
+
 
             }
-        }
+
     }
 
     public void oneStar() {
         Random R = new Random();
-        int r = R.nextInt(13);
-        while (true) {
+        int r = R.nextInt(10);
+
             switch (r) {
+                case 0:
+                    data1.add("1☆  日和莉");
+                    break;
                 case 1:
-                    data1.add("");
+                    data1.add("1☆  怜");
                     break;
                 case 2:
-                    data1.add("");
+                    data1.add("1☆  未奏希");
                     break;
                 case 3:
-                    data1.add("");
+                    data1.add("1☆  胡桃");
                     break;
                 case 4:
-                    data1.add("");
+                    data1.add("1☆  依里");
                     break;
                 case 5:
-                    data1.add("");
+                    data1.add("1☆  铃莓");
                     break;
                 case 6:
-                    data1.add("");
+                    data1.add("1☆  由加莉");
                     break;
                 case 7:
-                    data1.add("");
+                    data1.add("1☆  碧");
                     break;
                 case 8:
-                    data1.add("");
+                    data1.add("1☆  美咲");
                     break;
                 case 9:
-                    data1.add("");
-                    break;
-                case 10:
-                    data1.add("");
+                    data1.add("1☆  莉玛");
                     break;
                 default:
+                    data1.add("null1");
+
             }
-        }
+
 
 
     }
 
     public void open(int num){
-        Random R = new Random();
-        int r = R.nextInt(200);
-        try {
-            for (int i = 0; i < num; i++) {
-                if (r <= 5) {
-                    threeStar();
-                } else if (6 <= r && r <= 41) {
-                    twoStar();
-                } else if (42 <= r && r <= 200) {
-                    oneStar();
-                }
+        for (int i = 0; i < num; i++) {
+            Random R = new Random();
+            int r = R.nextInt(200);
+            if (r <= 5) {
+                threeStar();
+            } else if (6 <= r && r <= 41) {
+                twoStar();
+            } else if (42 <= r && r <= 200) {
+                oneStar();
             }
-        }catch (OutOfMemoryError error) {
-                System.gc();
-                System.runFinalization();
-
         }
-
-
         }
 
 
