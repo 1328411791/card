@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,11 +22,11 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> data1 = new ArrayList<>();
-
-
-
-    //{"姬塔","亚里莎","莫妮卡・韦斯文特","星野静流","白银纯","安芸真琴","冰川镜华","藤堂秋乃","樱井望","佐佐木咲恋",
-    //"支仓伊绪","支仓伊绪","衣之咲璃乃","柊杏奈","克里斯提娜","雾原霞","伊利亚","园上矛依未","御久间智","情人节静流","圣诞绫音","圣诞千歌"};
+    int baoshi = 0;
+    int three_star = 0;
+    int two_star = 0;
+    int one_star = 0;
+    int chishu = 0;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this, "你已经单抽", Toast.LENGTH_SHORT).show();
                 open(1);
+                baoshi = baoshi +150;
+                text();
                 listView.setAdapter(adapter[0]);
 
             }
@@ -86,7 +89,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "你已经十连", Toast.LENGTH_SHORT).show();
                 open(10);
+                baoshi = baoshi +1500;
                 listView.setAdapter(adapter[0]);
+                text();
 
             }
         });
@@ -97,9 +102,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"已重置",Toast.LENGTH_SHORT).show();
                 data1.clear();
+                baoshi = 0;
+                three_star = 0;
+                two_star = 0;
+                one_star = 0;
                 adapter[0] = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, data1);
                 listView.setAdapter(adapter[0]);
-
+                text();
             }
         });
 
@@ -111,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
     public void threeStar() {
         Random R1 = new Random();
         int r = R1.nextInt(13);
+        three_star=three_star+1;
             switch (r) {
                 case 0:
                     data1.add("3☆  杏奈");
@@ -162,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
     public void twoStar() {
         Random R = new Random();
         int r = R.nextInt(15);
+        two_star = two_star +1;
             switch (r) {
                 case 0:
                     data1.add("2☆  茜里");
@@ -218,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void oneStar() {
         Random R = new Random();
+        one_star = one_star + 1;
         int r = R.nextInt(10);
             switch (r) {
                 case 0:
@@ -260,6 +272,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void open(int num){
+        chishu = chishu + num;
         for (int i = 0; i < num; i++) {
             Random R = new Random();
             int r = R.nextInt(200);
@@ -272,6 +285,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         }
+
+    public void text(){
+        TextView textView = findViewById(R.id.text_1);
+        String s = Integer.toString(baoshi);
+        String c = Integer.toString(chishu);
+        String three = Integer.toString(three_star);
+        String two = Integer.toString(two_star);
+        String one = Integer.toString(one_star);
+        textView.setText(" 抽卡次数 "+c+ " 水晶 "+s +" 三星 "+three +" 二星 "+two+" 一星"+one);
+
+    }
 }
 
 
